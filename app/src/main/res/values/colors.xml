@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="coffee">#5D4037</color>
+    <color name="coffee_dark">#3E2723</color>
+    <color name="caramel">#C8963E</color>
+    <color name="leaf">#3F7D4E</color>
+    <color name="cream">#FFF8F0</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="text_primary">#2B1D16</color>
+    <color name="text_secondary">#7A6A60</color>
+    <color name="error">#B3261E</color>
+    <color name="white">#FFFFFF</color>
+</resources>
