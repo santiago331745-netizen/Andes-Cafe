@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+        android:background="@drawable/bg_header" android:padding="20dp">
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/crear_cuenta" android:textAppearance="@style/TextAppearance.AndesCafe.OnHeader" />
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nete_a_andescaf_como_comprador_o_ven" android:textAppearance="@style/TextAppearance.AndesCafe.OnHeaderSub" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="@dimen/screen_padding">
+    <com.google.android.material.textfield.TextInputLayout  style="@style/Widget.AndesCafe.TextInput"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" android:hint="@string/nombre_completo" >
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etName"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilEmail" style="@style/Widget.AndesCafe.TextInput"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" android:hint="@string/correo_electrnico" >
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etEmail"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilPassword" style="@style/Widget.AndesCafe.TextInput"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" android:hint="@string/contrasea_mnimo_6_caracteres" app:endIconMode="password_toggle">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPassword"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilConfirm" style="@style/Widget.AndesCafe.TextInput"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" android:hint="@string/confirmar_contrasea" >
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etConfirm"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tipo_de_cuenta" android:textAppearance="@style/TextAppearance.AndesCafe.Title" />
+    <RadioGroup android:id="@+id/rgRole" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+      <RadioButton android:id="@+id/rbBuyer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16dp" android:buttonTint="@color/cafe_primary" android:checked="true" android:text="@string/comprador"/>
+      <RadioButton android:id="@+id/rbSeller" android:layout_width="wrap_content" android:layout_height="wrap_content" android:buttonTint="@color/cafe_primary" android:text="@string/vendedor"/>
+    </RadioGroup>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnRegister" style="@style/Widget.AndesCafe.Button"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+        android:text="@string/crear_cuenta" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnBack" style="@style/Widget.AndesCafe.Button.Outlined"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+        android:text="@string/ya_tengo_cuenta" />
+
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>

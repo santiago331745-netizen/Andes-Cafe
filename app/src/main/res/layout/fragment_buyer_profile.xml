@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="@dimen/screen_padding">
+    <ImageView android:layout_width="96dp" android:layout_height="96dp" android:layout_gravity="center_horizontal" android:background="@drawable/bg_avatar" android:padding="24dp" android:src="@drawable/ic_person" android:contentDescription="@null" app:tint="@color/cafe_primary"/>
+    <TextView android:id="@+id/tvEmail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/correo" android:textAppearance="@style/TextAppearance.AndesCafe.Body" android:layout_gravity="center_horizontal" android:layout_marginTop="8dp" android:layout_marginBottom="16dp"/>
+    <com.google.android.material.textfield.TextInputLayout  style="@style/Widget.AndesCafe.TextInput"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" android:hint="@string/nombre_completo" >
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etName"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout  style="@style/Widget.AndesCafe.TextInput"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" android:hint="@string/telfono" >
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPhone"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="phone"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout  style="@style/Widget.AndesCafe.TextInput"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" android:hint="@string/direccin_de_entrega_habitual" >
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAddress"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnSaveProfile" style="@style/Widget.AndesCafe.Button"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+        android:text="@string/guardar_cambios" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnMyOrders" style="@style/Widget.AndesCafe.Button.Outlined"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+        android:text="@string/mis_pedidos" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnLogout" style="@style/Widget.AndesCafe.Button.Outlined"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+        android:text="@string/cerrar_sesin" />
+
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>

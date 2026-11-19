@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_buyer" app:startDestination="@id/buyerHome">
+    <fragment android:id="@+id/buyerHome" android:name="com.andescafe.tienda.buyer.BuyerHomeFragment" android:label="@string/inicio" tools:layout="@layout/fragment_buyer_home"/>
+    <fragment android:id="@+id/buyerCatalog" android:name="com.andescafe.tienda.buyer.BuyerCatalogFragment" android:label="@string/catlogo" tools:layout="@layout/fragment_buyer_catalog"/>
+    <fragment android:id="@+id/buyerDetail" android:name="com.andescafe.tienda.buyer.BuyerDetailFragment" android:label="@string/detalle_de_producto" tools:layout="@layout/fragment_buyer_detail"/>
+    <fragment android:id="@+id/buyerCart" android:name="com.andescafe.tienda.buyer.BuyerCartFragment" android:label="@string/carrito" tools:layout="@layout/fragment_buyer_cart"/>
+    <fragment android:id="@+id/buyerPayment" android:name="com.andescafe.tienda.buyer.BuyerPaymentFragment" android:label="@string/pasarela_de_pagos" tools:layout="@layout/fragment_buyer_payment"/>
+    <fragment android:id="@+id/buyerProfile" android:name="com.andescafe.tienda.buyer.BuyerProfileFragment" android:label="@string/perfil" tools:layout="@layout/fragment_buyer_profile"/>
+    <fragment android:id="@+id/buyerOrders" android:name="com.andescafe.tienda.buyer.BuyerOrdersFragment" android:label="@string/mis_pedidos" tools:layout="@layout/fragment_buyer_orders"/>
+</navigation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent">
+  <LinearLayout android:id="@+id/header" android:layout_width="match_parent" android:layout_height="wrap_content"
+      android:orientation="vertical" app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_header" android:padding="20dp">
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reporte_de_ventas" android:textAppearance="@style/TextAppearance.AndesCafe.OnHeader" />
+    <TextView android:id="@+id/tvSalesTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/total_acumulado_0" android:textAppearance="@style/TextAppearance.AndesCafe.OnHeaderSub" />
+    </LinearLayout>
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pedidos_registrados" android:textAppearance="@style/TextAppearance.AndesCafe.Title" android:layout_margin="16dp"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnExport" style="@style/Widget.AndesCafe.Button.Outlined" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:text="@string/compartir_reporte"/>
+  </LinearLayout>
+  <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler" android:layout_width="0dp" android:layout_height="0dp"
+      android:clipToPadding="false" android:padding="8dp"
+      app:layout_constraintTop_toBottomOf="@id/header" app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

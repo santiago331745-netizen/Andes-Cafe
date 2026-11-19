@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "845947671933",
+    "project_id": "andescafe",
+    "storage_bucket": "andescafe.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845947671933:android:7ca9142360f311dea92814",
+        "android_client_info": {
+          "package_name": "com.andescafe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx3wVBcc1gvdw4M9y_aEAD4AiZd2KC7NM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

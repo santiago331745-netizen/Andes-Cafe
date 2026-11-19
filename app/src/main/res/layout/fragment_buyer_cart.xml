@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent">
+  <LinearLayout android:id="@+id/header" android:layout_width="match_parent" android:layout_height="wrap_content"
+      android:orientation="vertical" app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mi_carrito" android:textAppearance="@style/TextAppearance.AndesCafe.Headline" />
+    </LinearLayout>
+  </LinearLayout>
+  <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler" android:layout_width="0dp" android:layout_height="0dp"
+      android:clipToPadding="false" android:padding="8dp"
+      app:layout_constraintTop_toBottomOf="@id/header" app:layout_constraintBottom_toTopOf="@id/bottomPanel"
+      app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+  <LinearLayout android:id="@+id/bottomPanel" android:layout_width="match_parent" android:layout_height="wrap_content"
+      android:orientation="vertical" android:background="@color/cafe_surface" android:padding="16dp" android:elevation="8dp"
+      app:layout_constraintBottom_toBottomOf="parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/total" android:textAppearance="@style/TextAppearance.AndesCafe.Title" />
+      <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+    <TextView android:id="@+id/tvTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/v_91_000" android:textAppearance="@style/TextAppearance.AndesCafe.Headline" />
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnPay" style="@style/Widget.AndesCafe.Button"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+        android:text="@string/ir_a_pagar" />
+  </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

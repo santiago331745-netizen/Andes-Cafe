@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+        android:background="@drawable/bg_header" android:padding="20dp">
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/panel_de_administracin" android:textAppearance="@style/TextAppearance.AndesCafe.OnHeader" />
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/resumen_general_de_andescaf" android:textAppearance="@style/TextAppearance.AndesCafe.OnHeaderSub" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="@dimen/screen_padding">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+      <com.google.android.material.card.MaterialCardView style="@style/Widget.AndesCafe.Card"
+          android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_margin="6dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <TextView android:id="@+id/tvStatUsers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/v_128" android:textAppearance="@style/TextAppearance.AndesCafe.Headline" />
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/usuarios" android:textAppearance="@style/TextAppearance.AndesCafe.Body" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+      <com.google.android.material.card.MaterialCardView style="@style/Widget.AndesCafe.Card"
+          android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_margin="6dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <TextView android:id="@+id/tvStatProducts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/v_56" android:textAppearance="@style/TextAppearance.AndesCafe.Headline" />
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/productos" android:textAppearance="@style/TextAppearance.AndesCafe.Body" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+      <com.google.android.material.card.MaterialCardView style="@style/Widget.AndesCafe.Card"
+          android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_margin="6dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <TextView android:id="@+id/tvStatOrders" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/v_342" android:textAppearance="@style/TextAppearance.AndesCafe.Headline" />
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pedidos" android:textAppearance="@style/TextAppearance.AndesCafe.Body" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+      <com.google.android.material.card.MaterialCardView style="@style/Widget.AndesCafe.Card"
+          android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_margin="6dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <TextView android:id="@+id/tvStatSales" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/v_12_4m" android:textAppearance="@style/TextAppearance.AndesCafe.Headline" />
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ventas_del_mes" android:textAppearance="@style/TextAppearance.AndesCafe.Body" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+    <TextView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accesos_rpidos" android:textAppearance="@style/TextAppearance.AndesCafe.Title" android:layout_marginTop="12dp"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnGoUsers" style="@style/Widget.AndesCafe.Button"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+        android:text="@string/gestionar_usuarios" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnGoSales" style="@style/Widget.AndesCafe.Button.Outlined"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+        android:text="@string/ver_reporte_de_ventas" />
+
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>

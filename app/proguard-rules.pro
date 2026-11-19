@@ -1,1 +1,1 @@
-# reglas por defecto
+# Reglas ProGuard del proyecto (vacío)

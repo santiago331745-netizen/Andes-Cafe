@@ -1,22 +1,20 @@
-# AndesCafé – Tienda virtual Android (Frontend)
+# AndesCafé · Tienda virtual Android (Actividad 5: aplicativo funcional)
 
-Proyecto Android Studio (Kotlin + XML, ViewBinding, Material Components). Interfaces para los roles **Administrador**, **Vendedor** y **Comprador** + pantallas transversales. Los datos son de ejemplo en memoria (`Repo.kt`).
+App Android nativa (Kotlin + XML) con roles **Administrador**, **Vendedor** y **Comprador**, respaldada por **Firebase** (Auth, Firestore, Storage), geolocalización de Google y pago simulado (PayPal Sandbox o ePayco listos para configurar).
 
-## Cómo ejecutar
-1. Abrir la carpeta en Android Studio (Hedgehog o superior, JDK 17) y esperar el *Gradle Sync*.
-2. Run ▶ en un emulador/dispositivo (minSdk 24).
-3. **APK:** *Build → Build Bundle(s) / APK(s) → Build APK(s)*. Queda en `app/build/outputs/apk/debug/app-debug.apk`.
+**Autor:** Sergio Augusto González · Universidad Compensar
 
-## Acceso de prueba
-Cualquier correo válido y contraseña de 4+ caracteres; elegir el rol con los chips. La huella requiere un dispositivo/emulador con biometría configurada.
+## Puesta en marcha
+Sigue `docs/GUIA_CONFIGURACION.md` (Firebase, ePayco, primer administrador).
 
-## Pantallas
-| Rol | Pantallas |
-|---|---|
-| Transversal | Splash, Login (+biometría), Recuperar contraseña, Drawer / Bottom Navigation |
-| Administrador | Dashboard, Usuarios (listar/crear/editar/eliminar), Productos, Reporte de ventas |
-| Vendedor | Productos (CRUD), Pedidos recibidos, Perfil |
-| Comprador | Inicio, Catálogo (búsqueda), Detalle, Carrito, Pasarela de pagos, Perfil |
+## Funcionalidades
+- Registro, login, logout y recuperación de contraseña · login con huella
+- CRUD de usuarios (admin) y de productos con foto de cámara/galería (vendedor)
+- Carrito, órdenes e historial · geolocalización de la entrega · pago con ePayco
+- Reglas de seguridad en `firebase/`
 
-## Recursos personalizados (`res/`)
-`values/` colors (paleta café/caramelo), themes, styles, dimens, strings · `drawable/` shapes, gradientes y vectores · `color/` selector · `menu/` un menú por rol · `layout/` 1 XML por pantalla.
+## Documentos
+`docs/DOCUMENTACION_TECNICA.md` · `docs/MANUAL_USUARIO.md` · `docs/VIDEO_LANZAMIENTO.md`
+
+## Requisitos
+Android Studio Koala+ · JDK 17 o 21 · minSdk 24 · compileSdk 34

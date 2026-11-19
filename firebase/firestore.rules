@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function myRole() { return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role; }
+    function isAdmin() { return signedIn() && myRole() == 'admin'; }
+
+    // Perfiles de usuario
+    match /users/{uid} {
+      allow read: if signedIn();
+      // Auto-registro solo como comprador/vendedor; el admin puede crear cualquier rol
+      allow create: if signedIn() && ((request.auth.uid == uid && request.resource.data.role in ['buyer', 'seller']) || isAdmin());
+      // Cada usuario edita sus datos sin cambiar rol ni estado; el admin edita todo
+      allow update: if signedIn() && ((request.auth.uid == uid && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role', 'active'])) || isAdmin());
+      allow delete: if isAdmin();
+    }
+
+    // Productos
+    match /products/{id} {
+      allow read: if signedIn();
+      allow create: if signedIn() && myRole() == 'seller' && request.resource.data.sellerId == request.auth.uid;
+      allow update: if signedIn() && ((myRole() == 'seller' && resource.data.sellerId == request.auth.uid)
+                    || request.resource.data.diff(resource.data).affectedKeys().hasOnly(['stock']) || isAdmin());
+      allow delete: if signedIn() && ((myRole() == 'seller' && resource.data.sellerId == request.auth.uid) || isAdmin());
+    }
+
+    // Carrito: solo su dueño
+    match /carts/{uid}/items/{item} {
+      allow read, write: if signedIn() && request.auth.uid == uid;
+    }
+
+    // Órdenes
+    match /orders/{id} {
+      allow create: if signedIn() && request.resource.data.buyerId == request.auth.uid;
+      allow read: if signedIn() && (resource.data.buyerId == request.auth.uid || request.auth.uid in resource.data.sellerIds || isAdmin());
+      allow update: if signedIn() && (request.auth.uid in resource.data.sellerIds || isAdmin());
+    }
+  }
+}

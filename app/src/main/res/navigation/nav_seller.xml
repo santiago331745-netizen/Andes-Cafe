@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_seller" app:startDestination="@id/sellerProducts">
+    <fragment android:id="@+id/sellerProducts" android:name="com.andescafe.tienda.seller.SellerProductsFragment" android:label="@string/mis_productos" tools:layout="@layout/fragment_seller_products"/>
+    <fragment android:id="@+id/sellerProductForm" android:name="com.andescafe.tienda.seller.SellerProductFormFragment" android:label="@string/crear_editar_producto" tools:layout="@layout/fragment_seller_product_form"/>
+    <fragment android:id="@+id/sellerOrders" android:name="com.andescafe.tienda.seller.SellerOrdersFragment" android:label="@string/pedidos_recibidos" tools:layout="@layout/fragment_seller_orders"/>
+    <fragment android:id="@+id/sellerProfile" android:name="com.andescafe.tienda.seller.SellerProfileFragment" android:label="@string/perfil_de_vendedor" tools:layout="@layout/fragment_seller_profile"/>
+</navigation>
